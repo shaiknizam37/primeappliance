@@ -1,10 +1,11 @@
 import { siteUrl } from "@/lib/env";
 
 const businessName = process.env.NEXT_PUBLIC_BUSINESS_NAME || "Prime Appliance Care";
-const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || "+91 98765 43210";
-const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+91 98765 43210";
-const email = process.env.NEXT_PUBLIC_EMAIL || "info@primeappliancecare.com";
+const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || "+91 8197869926";
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+91 8197869926";
+const email = process.env.NEXT_PUBLIC_EMAIL || "shouibm44@gmail.com";
 const location = process.env.NEXT_PUBLIC_SERVICE_AREA || "Bangalore, Karnataka";
+
 
 const digitsOnly = (value: string) => value.replace(/\D/g, "");
 
