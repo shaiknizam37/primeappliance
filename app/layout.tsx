@@ -3,6 +3,7 @@ import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { MobileActions } from "@/components/mobile-actions";
+import { CallModal } from "@/components/call-modal";
 import { siteUrl } from "@/lib/env";
 
 export const metadata: Metadata = {
@@ -35,6 +36,7 @@ export default function RootLayout({
         {children}
         <SiteFooter />
         <MobileActions />
+        <CallModal />
       </body>
     </html>
   );

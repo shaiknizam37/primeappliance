@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { contact } from "@/lib/site-data";
+import { openCallModal } from "@/components/call-modal";
 
 const nav = [
   ["Home", "/"],
@@ -47,9 +48,9 @@ export function SiteHeader() {
           <a className="btn btn-whatsapp" href={contact.whatsappHref}>
             WhatsApp Us
           </a>
-          <a className="btn btn-call" href={contact.phoneHref}>
+          <button className="btn btn-call" onClick={openCallModal} type="button">
             Call Now
-          </a>
+          </button>
         </div>
         <button
           aria-controls="mobile-navigation"
@@ -101,9 +102,9 @@ export function SiteHeader() {
           <a className="btn btn-whatsapp" href={contact.whatsappHref}>
             WhatsApp Us
           </a>
-          <a className="btn btn-call" href={contact.phoneHref}>
+          <button className="btn btn-call" onClick={openCallModal} type="button">
             Call Now
-          </a>
+          </button>
         </div>
       </aside>
     </>

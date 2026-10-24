@@ -737,6 +737,104 @@ details p {
   display: none;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+.call-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(3, 24, 49, 0.62);
+}
+
+.call-modal {
+  position: relative;
+  width: min(100%, 410px);
+  padding: 34px 28px 28px;
+  text-align: center;
+  border: 1px solid #d6e8f4;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(3, 24, 49, 0.28);
+}
+
+.call-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  color: var(--muted);
+  background: #eef7fb;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.call-modal-close:hover {
+  color: var(--navy);
+  background: #dceef7;
+}
+
+.call-modal-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--green);
+}
+
+.call-modal-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.call-modal h2 {
+  margin: 4px 0 10px;
+  color: var(--navy);
+  font-size: 25px;
+}
+
+.call-modal-copy {
+  max-width: 310px;
+  margin: 0 auto 22px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.call-modal-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 48px;
+  border-radius: 6px;
+  color: #fff;
+  background: var(--blue);
+  font-weight: 900;
+}
+
+.call-modal-action:hover {
+  background: var(--navy);
+}
+
+.call-modal-action svg {
+  width: 18px;
+  height: 18px;
+}
+
 @media (max-width: 900px) {
   body {
     padding-bottom: 72px;
@@ -871,6 +969,21 @@ details p {
     font-size: 12px;
     font-weight: 900;
     border-right: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .mobile-actions button {
+    display: grid;
+    place-items: center;
+    min-height: 54px;
+    padding: 0;
+    border: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+    background: transparent;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
   }
 
   .mobile-actions a:nth-child(2) {
