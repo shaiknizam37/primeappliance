@@ -12,7 +12,7 @@ export function openCallModal() {
 
 export function CallModal() {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const previousPathname = useRef<string | null>(null);
 
   useEffect(() => {
