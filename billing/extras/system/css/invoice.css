@@ -1,0 +1,9 @@
+.border{
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+.no-border{
+  text-align: left;
+  padding: 8px;
+}
