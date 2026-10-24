@@ -152,12 +152,18 @@ export function ServiceDetail({
   description,
   image,
   serviceTypes,
+  seoSection,
   problems,
 }: {
   appliance: string;
   description: string;
   image: string;
   serviceTypes: string[];
+  seoSection?: {
+    heading: string;
+    paragraphs: string[];
+    bullets: string[];
+  };
   problems: string[];
 }) {
   const steps = ["Book", "Inspect", "Diagnose", "Repair", "Test"];
@@ -182,6 +188,25 @@ export function ServiceDetail({
           <Image src={image} alt={`${appliance} repair service`} fill sizes="(max-width: 760px) 100vw, 44vw" />
         </div>
       </section>
+      {seoSection ? (
+        <section className="section seo-service-copy">
+          <div className="section-heading">
+            <h2>{seoSection.heading}</h2>
+          </div>
+          <div className="seo-copy-grid">
+            <div>
+              {seoSection.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+            <ul className="check-list">
+              {seoSection.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
       <section className="section two-col">
         <div>
           <h2>We Service</h2>
