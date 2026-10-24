@@ -12,8 +12,12 @@ export function openCallModal() {
 
 export function CallModal() {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const previousPathname = useRef<string | null>(null);
+
+  useEffect(() => {
+    setIsOpen(true);
+  }, []);
 
   useEffect(() => {
     if (previousPathname.current !== null && previousPathname.current !== pathname) {
